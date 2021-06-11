@@ -245,14 +245,14 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array){
-  /*Your Code Here*/   /* Question ******************************/
-  // let newList: [];
-  // for(let i= 0; i < array.length; i++){
-  //   if(array[i].years.includes(1900-2000)){
-  //     newList.push(array[i].name));
-  //   }
-  // }
-  // return newList;
+  /*Your Code Here*/   
+   let newList= [];
+ for(let i= 0; i < array.length; i++){
+  if(array[i].years.substring(0,4)>'1900' && array[i].years.substring(0,4) < '2000' ){
+     newList.push(array[i].name);
+   }
+}
+ return newList;
 }
 
 
