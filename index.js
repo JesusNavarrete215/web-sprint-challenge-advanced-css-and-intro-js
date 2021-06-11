@@ -248,7 +248,7 @@ function get20s(array){
   /*Your Code Here*/   /* Question ******************************/
   // let newList: [];
   // for(let i= 0; i < array.length; i++){
-  //   if(array[i].years < 1900 && array[i].years > 2000){
+  //   if(array[i].years.includes(1900-2000)){
   //     newList.push(array[i].name));
   //   }
   // }
@@ -291,12 +291,14 @@ Example: addArtist(artists) should return the artists array with the above objec
 
 function addArtist(array){
     /*Your Code Here*/
-    array.unshift('id': '20',
-      'name': 'Jesus', 
-      'years': 'May 21,2021 - current day',
-      'genre': 'Web Design', 
-      'nationality': 'Mexican',
-      'bio': 'Being raised in the United States, I have been accustomed to greasy food.'
+    array.push(
+      {id: '20',
+      name: 'Jesus', 
+      years: 'May 21,2021 - current day',
+      genre: 'Web Design', 
+      nationality: 'Mexican',
+      bio: 'Being raised in the United States, I have been accustomed to greasy food.'});
+      return array;
   }
 
   
@@ -308,10 +310,16 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(array){
+/*Your Code Here*/
+let onekind = [];
+for(let i=0; i<array.length; i++){
+  if(array[i].paintings > 100){
+    onekind.push(array[i].name);
+  }
 }
-
+return onekind;
+}
 
 
 
